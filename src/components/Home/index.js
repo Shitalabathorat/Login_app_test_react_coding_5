@@ -1,6 +1,6 @@
-import Login from './components/Login'
-import LogOut from './components/LogOut'
-import Message from './components/Message'
+import Login from '../Login'
+import LogOut from '../LogOut'
+import Message from '../Message'
 import './index.css'
 
 import './App.css'
