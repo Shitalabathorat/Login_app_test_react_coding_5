@@ -1,21 +1,13 @@
-import {Component} from 'react'
 import './index.css'
 
-class LogOut extends Component {
-  state = {isLogOut: true}
+const Logout = props => {
+  const {logout} = props
 
-  onChange = () => {
-    this.setState(prevState => ({isLogOut: !prevState.isLogOut}))
-  }
-  render() {
-    const {isLogOut} = this.state
-    return (
-      <div>
-        <button className="btn" type="button" onClick={this.onChange}>
-          {isLogOut ? 'Logout' : null}
-        </button>
-      </div>
-    )
-  }
+  return (
+    <button type="button" className="btn" onClick={logout}>
+      Logout
+    </button>
+  )
 }
-export default LogOut
+
+export default Logout
