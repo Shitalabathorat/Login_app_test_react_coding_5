@@ -1,18 +1,11 @@
-import {Component} from 'react'
 import './index.css'
- 
 
-class Message extends Component{
-    state={IsPleaseLogin : true}
+const Message = props => {
+  const {isLoggedIn} = props
 
-    render(){
-        const={IsPleaseLogin}=this.state
-        return(
-            <div>
-                <h1 className="heading">{IsPleaseLogin? 'Please Login' : 'Welcome User'}</h1>
-            </div>
+  const message = isLoggedIn ? 'Welcome User' : 'Please Login'
 
-        )
-    }
+  return <h1 className="heading">{message}</h1>
 }
+
 export default Message
